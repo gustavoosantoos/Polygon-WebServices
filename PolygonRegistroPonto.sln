@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{90D4BE4E-7E9E-42D6-B049-30B787BB9ABA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{620901C1-3617-4B61-9A6F-CA45B237E09A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{9F0DC808-874C-4D47-B258-B2C5F9C4A4F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{36D5570C-0794-4CE3-9273-39BD49EFCCFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{CD66B8ED-BDAD-4747-BCF8-42CA52ED5467}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - Cross-Cutting", "5.2 - Cross-Cutting", "{7438134A-FC83-42C1-B136-31A97588B2A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polygon.Domain", "Polygon.Domain\Polygon.Domain.csproj", "{381BDDC9-AF97-4EFA-9712-6A723029384A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polygon.Services", "Polygon.Services\Polygon.Services.csproj", "{D166043A-35B5-4303-8F8E-12209CB993B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polygon.Data", "Polygon.Data\Polygon.Data.csproj", "{911C8C7A-1466-419C-910A-926AB4E24DE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polygon.WebServices", "Polygon.WebServices\Polygon.WebServices.csproj", "{8A0B3074-5369-401A-B609-83B81988C307}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{381BDDC9-AF97-4EFA-9712-6A723029384A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381BDDC9-AF97-4EFA-9712-6A723029384A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381BDDC9-AF97-4EFA-9712-6A723029384A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381BDDC9-AF97-4EFA-9712-6A723029384A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D166043A-35B5-4303-8F8E-12209CB993B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D166043A-35B5-4303-8F8E-12209CB993B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D166043A-35B5-4303-8F8E-12209CB993B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D166043A-35B5-4303-8F8E-12209CB993B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{911C8C7A-1466-419C-910A-926AB4E24DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911C8C7A-1466-419C-910A-926AB4E24DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911C8C7A-1466-419C-910A-926AB4E24DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911C8C7A-1466-419C-910A-926AB4E24DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A0B3074-5369-401A-B609-83B81988C307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A0B3074-5369-401A-B609-83B81988C307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A0B3074-5369-401A-B609-83B81988C307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A0B3074-5369-401A-B609-83B81988C307}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD66B8ED-BDAD-4747-BCF8-42CA52ED5467} = {36D5570C-0794-4CE3-9273-39BD49EFCCFC}
+		{7438134A-FC83-42C1-B136-31A97588B2A0} = {36D5570C-0794-4CE3-9273-39BD49EFCCFC}
+		{381BDDC9-AF97-4EFA-9712-6A723029384A} = {9F0DC808-874C-4D47-B258-B2C5F9C4A4F9}
+		{D166043A-35B5-4303-8F8E-12209CB993B0} = {620901C1-3617-4B61-9A6F-CA45B237E09A}
+		{911C8C7A-1466-419C-910A-926AB4E24DE0} = {CD66B8ED-BDAD-4747-BCF8-42CA52ED5467}
+		{8A0B3074-5369-401A-B609-83B81988C307} = {90D4BE4E-7E9E-42D6-B049-30B787BB9ABA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C9133E5-CBAE-4231-862F-8D1D5607DEC3}
+	EndGlobalSection
+EndGlobal
