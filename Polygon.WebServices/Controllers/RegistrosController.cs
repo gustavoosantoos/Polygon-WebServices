@@ -29,7 +29,7 @@ namespace Polygon.WebServices.Controllers
             if (registroResponse.Sucesso)
                 return Ok();
 
-            return BadRequest(registroResponse.Mensagens);
+            return BadRequest(registroResponse.Mensagens); 
         }
     }
 }
