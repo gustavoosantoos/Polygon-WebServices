@@ -36,7 +36,7 @@ namespace Polygon.WebServices.Controllers
         [HttpGet(template: "{matricula}/{mes}")]
         public ActionResult RegistrosDoFuncionario(short matricula, byte mes)
         {
-            if (mes < 0 || mes > 11)
+            if (mes > 11)
                 return BadRequest("Mês informado é inválido.");
 
             var registroResponse = _service.FindRegistrosByMatricula(matricula, (Mes) mes);
