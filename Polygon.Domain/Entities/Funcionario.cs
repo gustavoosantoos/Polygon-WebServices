@@ -11,7 +11,7 @@ namespace Polygon.Domain.Entities
         public bool Administrador { get; set; }
         public bool Ativo { get; set; }
 
-        protected Funcionario() { }
+        public Funcionario() { }
 
         public Funcionario(int matricula, string senha)
         {
