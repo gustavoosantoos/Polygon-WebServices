@@ -6,6 +6,7 @@ using MySql.Data.MySqlClient;
 using Polygon.Data.Factory;
 using Polygon.Domain.Entities;
 using Polygon.Domain.Interfaces.Repositories;
+using Polygon.Domain.Shared.Enumerations;
 
 namespace Polygon.Data.Repositories
 {
@@ -36,6 +37,17 @@ namespace Polygon.Data.Repositories
             using (var connection = ConnectionFactory.GetConnection())
             {
                 return connection.Query<Registro>(query);
+            }
+        }
+
+        public IEnumerable<Registro> FindRegistrosByMatricula(int matricula, Mes mes)
+        {
+            var query = "select * from registros where MatriculaFuncionario = @Matricula and MONTH(DataHora) = @Mes and YEAR(DataHora) = @Ano";
+            var anoAtual = DateTime.Now.Year;
+
+            using (var connection = ConnectionFactory.GetConnection())
+            {
+                return connection.Query<Registro>(query, new { Matricula = matricula, Mes = mes, Ano = anoAtual });
             }
         }
     }

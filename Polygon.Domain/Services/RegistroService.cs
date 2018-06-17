@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Polygon.Domain.Entities;
 using Polygon.Domain.Interfaces.Repositories;
 using Polygon.Domain.Interfaces.Services;
 using Polygon.Domain.Interfaces.Services.FuncionarioService;
 using Polygon.Domain.Interfaces.Services.RegistroService;
+using Polygon.Domain.Shared.Enumerations;
 
 namespace Polygon.Domain.Services
 {
@@ -29,6 +31,19 @@ namespace Polygon.Domain.Services
             {
                 var response = new BaseServiceResponse<Registro>("Erro ao salvar registro.");
                 return response;
+            }
+        }
+
+        public BaseServiceResponse<Registro[]> RegistrosByMatricula(int matricula, Mes mes)
+        {
+            try
+            {
+                Registro[] registros = _repository.FindRegistrosByMatricula(matricula, mes).ToArray();
+                return new BaseServiceResponse<Registro[]>(registros);
+            }
+            catch (Exception ex)
+            {
+                return new BaseServiceResponse<Registro[]>("Erro ao buscar registros.");
             }
         }
     }

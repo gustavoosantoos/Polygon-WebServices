@@ -5,6 +5,7 @@ using Polygon.Domain.Entities;
 using Polygon.Domain.Interfaces.Services;
 using Polygon.Domain.Interfaces.Services.FuncionarioService;
 using Polygon.Domain.Interfaces.Services.RegistroService;
+using Polygon.Domain.Shared.Enumerations;
 
 namespace Polygon.Services
 {
@@ -26,6 +27,15 @@ namespace Polygon.Services
                 return _service.RegistrarPonto(registro);
             
             return new BaseServiceResponse<Registro>(funcionarioResponse.Mensagens);
+        }
+
+        public BaseServiceResponse<Registro[]> FindRegistrosByMatricula(int matricula, Mes mes)
+        {
+            var funcionarioResponse = _funcionarioService.BuscarPorMatricula(matricula);
+            if (funcionarioResponse.Sucesso)
+                return _service.RegistrosByMatricula(matricula, mes);
+
+            return new BaseServiceResponse<Registro[]>(funcionarioResponse.Mensagens);
         }
     }
 }

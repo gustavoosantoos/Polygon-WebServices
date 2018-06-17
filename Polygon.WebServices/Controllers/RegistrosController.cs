@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Polygon.Domain.Entities;
+using Polygon.Domain.Shared.Enumerations;
 using Polygon.Services;
 
 namespace Polygon.WebServices.Controllers
@@ -30,6 +31,19 @@ namespace Polygon.WebServices.Controllers
                 return Ok();
 
             return BadRequest(registroResponse.Mensagens); 
+        }
+
+        [HttpGet(template: "{matricula}/{mes}")]
+        public ActionResult RegistrosDoFuncionario(short matricula, byte mes)
+        {
+            if (mes < 0 || mes > 11)
+                return BadRequest("Mês informado é inválido.");
+
+            var registroResponse = _service.FindRegistrosByMatricula(matricula, (Mes) mes);
+            if (registroResponse.Sucesso)
+                return Ok(registroResponse);
+
+            return BadRequest(registroResponse.Mensagens);
         }
     }
 }
