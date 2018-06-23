@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using MySql.Data.MySqlClient;
+using Oracle.ManagedDataAccess.Client;
 
 namespace Polygon.Data.Factory
 {
@@ -10,9 +12,9 @@ namespace Polygon.Data.Factory
         private const string ConnectionString =
             "Server=localhost;Port=3306;Database=polygonpontoonline;UID=root;Pwd=!root;SslMode=none";
 
-        public static MySqlConnection GetConnection()
+        public static IDbConnection GetConnection()
         {
-            return new MySqlConnection(ConnectionString);
+            return new OracleConnection(ConnectionString);
         }
     }
 }
