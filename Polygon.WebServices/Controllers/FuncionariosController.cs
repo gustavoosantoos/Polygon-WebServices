@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Polygon.Domain.Entities;
 using Polygon.Domain.Interfaces.Services.FuncionarioService;
 using Polygon.Services;
+using Polygon.WebServices.Requests;
 
 namespace Polygon.WebServices.Controllers
 {
@@ -22,9 +23,9 @@ namespace Polygon.WebServices.Controllers
         }
 
         [HttpPost]
-        public IActionResult CriarFuncionario(Funcionario administrador, Funcionario novoFuncionario)
+        public IActionResult CriarFuncionario([FromBody] AdicionarFuncionarioRequest request)
         {
-            var criacaoResponse = _service.CriarFuncionario(administrador, novoFuncionario);
+            var criacaoResponse = _service.CriarFuncionario(request.Administrador, request.NovoFuncionario);
             if (criacaoResponse.Sucesso)
                 return Ok(criacaoResponse);
 
