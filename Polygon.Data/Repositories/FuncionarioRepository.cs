@@ -17,6 +17,7 @@ namespace Polygon.Data.Repositories
 
             using (var connection = ConnectionFactory.GetConnection())
             {
+                connection.Open();
                 connection.Execute(query, funcionario);
             }
         }
@@ -31,6 +32,7 @@ namespace Polygon.Data.Repositories
             var query = "select * from funcionarios";
             using (var connection = ConnectionFactory.GetConnection())
             {
+                connection.Open();
                 connection.Query<Funcionario>(query);
             }
         }
@@ -38,9 +40,10 @@ namespace Polygon.Data.Repositories
         public void Remove(int matricula)
         {
             var query = "update funcionarios set ativo = false where matricula = @Matricula";
-            using (var connecion = ConnectionFactory.GetConnection())
+            using (var connection = ConnectionFactory.GetConnection())
             {
-                connecion.Execute(query, new { Matricula = matricula });
+                connection.Open();
+                connection.Execute(query, new { Matricula = matricula });
             }
         }
 
@@ -49,6 +52,7 @@ namespace Polygon.Data.Repositories
             var query = "select * from funcionarios where matricula = @Matricula";
             using (var connection = ConnectionFactory.GetConnection())
             {
+                connection.Open();
                 return connection.Query<Funcionario>(query, new { Matricula = matricula }).FirstOrDefault();
             }
         }
