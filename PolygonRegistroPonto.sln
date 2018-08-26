@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polygon.Services", "Polygon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polygon.Data", "Polygon.Data\Polygon.Data.csproj", "{911C8C7A-1466-419C-910A-926AB4E24DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polygon.WebServices", "Polygon.WebServices\Polygon.WebServices.csproj", "{8A0B3074-5369-401A-B609-83B81988C307}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polygon.WebServices", "Polygon.WebServices\Polygon.WebServices.csproj", "{8A0B3074-5369-401A-B609-83B81988C307}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F8148DB6-E9DD-4CE4-B36C-1F2079933F24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{8A0B3074-5369-401A-B609-83B81988C307}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A0B3074-5369-401A-B609-83B81988C307}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A0B3074-5369-401A-B609-83B81988C307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8148DB6-E9DD-4CE4-B36C-1F2079933F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8148DB6-E9DD-4CE4-B36C-1F2079933F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8148DB6-E9DD-4CE4-B36C-1F2079933F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8148DB6-E9DD-4CE4-B36C-1F2079933F24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

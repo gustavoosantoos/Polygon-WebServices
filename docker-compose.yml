@@ -1,0 +1,29 @@
+version: '3.6'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: root
+      MYSQL_DATABASE: polygonpontoonline
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: root
+    restart: always
+  polygon.webservices:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:55000;http://+:80
+    ports:
+      - 55001:55000
+      - 55002:80
+    build:
+      context: .
+      dockerfile: Polygon.WebServices/Dockerfile
+    depends_on:
+      - db
+    networks:
+      - network_trip_teste
+
+networks:
+    network_trip_teste:
+      driver: bridge

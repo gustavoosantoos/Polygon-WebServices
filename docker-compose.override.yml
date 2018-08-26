@@ -1,0 +1,8 @@
+version: '3.6'
+
+services:
+  polygon.webservices:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
