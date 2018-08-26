@@ -10,7 +10,7 @@ namespace Polygon.Data.Factory
     public static class ConnectionFactory
     {
         private const string ConnectionString =
-            "Server=db;Port=3306;Database=polygonpontoonline;UID=admin;Pwd=root;SslMode=none";
+            "Server=localhost;Port=3306;Database=polygonpontoonline;UID=admin;Pwd=root;SslMode=none";
         
         public static IDbConnection GetConnection()
         {

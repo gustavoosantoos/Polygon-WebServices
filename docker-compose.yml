@@ -9,6 +9,8 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: root
     restart: always
+    ports:
+      - 55003:3306
   polygon.webservices:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
