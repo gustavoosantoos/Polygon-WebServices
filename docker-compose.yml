@@ -18,9 +18,7 @@ services:
     ports:
       - 55001:55000
       - 55002:80
-    build:
-      context: .
-      dockerfile: Polygon.WebServices/Dockerfile
+    image: gustavoosantoos/polygon-registro-ponto
     depends_on:
       - db
     networks:
